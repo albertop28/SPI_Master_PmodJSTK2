@@ -62,6 +62,8 @@ webtalk_pn.xml
 
 # generated folders
 iseconfig/
+isim/
+ipcore_dir/
 xlnx_auto_0_xdb/
 xst/
 _ngo/
