@@ -1,10 +1,14 @@
 # intermediate build files
 *.bgn
 *.xise
-# *.bit
+*.bit
 *.bld
+*.cmd
 *.cmd_log
 *.drc
+*.exe
+*.ini
+*.log
 *.ll
 *.lso
 *.msd
@@ -26,7 +30,9 @@
 *.twx
 *.unroutes
 *.ut
+*.wdb
 *.xpi
+*.xmsgs
 *.xst
 *_bitgen.xwbt
 *_envsettings.html
