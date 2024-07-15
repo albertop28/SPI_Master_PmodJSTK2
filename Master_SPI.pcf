@@ -1,0 +1,38 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Jul 07 04:00:32 2024
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "reset_n" LOCATE = SITE "N2" LEVEL 1;
+PIN reset_n_pin<0> = BEL "reset_n" PINNAME PAD;
+PIN "reset_n_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "clk" LOCATE = SITE "E7" LEVEL 1;
+COMP "miso" LOCATE = SITE "D15" LEVEL 1;
+COMP "sclk" LOCATE = SITE "F15" LEVEL 1;
+COMP "psh1" LOCATE = SITE "E2" LEVEL 1;
+COMP "mosi" LOCATE = SITE "B15" LEVEL 1;
+COMP "psh2" LOCATE = SITE "A2" LEVEL 1;
+COMP "led_cs1" LOCATE = SITE "C4" LEVEL 1;
+COMP "LED_Data_1<0>" LOCATE = SITE "M11" LEVEL 1;
+COMP "cs1" LOCATE = SITE "B13" LEVEL 1;
+COMP "LED_Data_1<1>" LOCATE = SITE "M6" LEVEL 1;
+COMP "LED_Data_1<2>" LOCATE = SITE "M4" LEVEL 1;
+COMP "LED_Data_1<3>" LOCATE = SITE "P13" LEVEL 1;
+COMP "LED_Data_2<0>" LOCATE = SITE "C2" LEVEL 1;
+COMP "LED_Data_1<4>" LOCATE = SITE "R9" LEVEL 1;
+COMP "led_miso" LOCATE = SITE "C8" LEVEL 1;
+COMP "LED_Data_2<1>" LOCATE = SITE "D1" LEVEL 1;
+COMP "LED_Data_1<5>" LOCATE = SITE "P7" LEVEL 1;
+COMP "LED_Data_2<2>" LOCATE = SITE "F11" LEVEL 1;
+COMP "LED_Data_1<6>" LOCATE = SITE "R4" LEVEL 1;
+COMP "LED_Data_2<3>" LOCATE = SITE "D11" LEVEL 1;
+COMP "LED_Data_1<7>" LOCATE = SITE "N1" LEVEL 1;
+COMP "led_sclk" LOCATE = SITE "C10" LEVEL 1;
+COMP "LED_Data_2<4>" LOCATE = SITE "D8" LEVEL 1;
+COMP "led_reset_n" LOCATE = SITE "D13" LEVEL 1;
+COMP "LED_Data_2<5>" LOCATE = SITE "D7" LEVEL 1;
+COMP "LED_Data_2<6>" LOCATE = SITE "E6" LEVEL 1;
+COMP "LED_Data_2<7>" LOCATE = SITE "D4" LEVEL 1;
+COMP "led_mosi" LOCATE = SITE "D6" LEVEL 1;
+SCHEMATIC END;
+

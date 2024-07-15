@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/ise/ISE_Virtual_Machine_interconnection/from0_SPI/Master_SPI_isim_beh.exe" -prj "/home/ise/ISE_Virtual_Machine_interconnection/from0_SPI/Master_SPI_beh.prj" "work.Master_SPI" 
