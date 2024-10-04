@@ -28,6 +28,4 @@ net "LED_Data_2(4)" loc = "F11";
 net "LED_Data_2(5)" loc = "D11";
 net "LED_Data_2(6)" loc = "D8";
 net "LED_Data_2(7)" loc = "D7";
-net "LED_Data_2(8)" loc = "E6";
-net "LED_Data_2(9)" loc = "D4";
 
