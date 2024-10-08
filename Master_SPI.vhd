@@ -14,8 +14,7 @@ architecture Behavioral of Master_SPI is
 	signal cont : integer := 1;
 	signal byte_received : std_logic_vector(39 downto 0):= "0000000000000000000000000000000000000001";
 	signal cont_byte : integer range 0 to 40 := 0;
-	--signal pos_x, pos_y: std_logic_vector(7 downto 0):= "00000000";
-	constant command_pos : std_logic_vector(7 downto 0):= "00000000";
+	constant command_pos : std_logic_vector(7 downto 0):= "10000001";
 	constant command_led_green : std_logic_vector(7 downto 0):= "00000011";
 begin
 
@@ -41,33 +40,32 @@ process(reloj, reset_n) begin
 	else --reset_n = '0' then
 		sclk <= reloj;
 		if reloj'event and reloj = '1' then
-			if cont_byte = 40 then
+		case cont_byte is
+			when 40 =>
 				cs1 <= '1';
 				mosi <= '0';
-				--LED_Data_2(7 downto 6) <= byte_received(25 downto 24);
-				--LED_Data_2(5 downto 0) <= byte_received(39 downto 34);
-				LED_Data_2 <= byte_received(25 downto 24) & byte_received(39 downto 34);
 				LED_Data_1 <= byte_received(9 downto 8) & byte_received(23 downto 18);
-				--LED_Data_1(5 downto 0) <= byte_received(23 downto 18);
-				psh1 <= byte_received(0);
-				psh2 <= byte_received(1);
-				cont_byte <= 0;
-				--pos_x <= byte_received(35 downto 28);
-				--pos_y <= byte_received(23 downto 16);
-			else
+            LED_Data_2 <= byte_received(25 downto 24) & byte_received(39 downto 34);
+            psh1 <= byte_received(0);
+            psh2 <= byte_received(1);
+            cont_byte <= 0;
+            --pos_x <= byte_received(35 downto 28);
+            --pos_y <= byte_received(23 downto 16);
+			when 0 to 7 =>
+				cs1 <= '0';
+				mosi <= command_pos(cont_byte);
+            -- Shift bits
+            byte_received <= byte_received(38 downto 0) & miso;
+				cont_byte <= cont_byte + 1;
+			when others =>
             cs1 <= '0';
-            if cont_byte < 8 then
-                mosi <= command_pos(cont_byte);
-            else
-                mosi <= '0';
-            end if;
+            mosi <= '0';
             -- Shift bits
             byte_received <= byte_received(38 downto 0) & miso;
             cont_byte <= cont_byte + 1;
-			end if;
+			end case;
 		end if;
 	end if;
 end process;
 
 end Behavioral;
-

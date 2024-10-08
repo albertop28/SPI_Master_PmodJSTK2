@@ -8,8 +8,8 @@ net "mosi" loc = "B15";
 net "miso" loc = "D15";
 net "sclk" loc = "F15";
 #SPI ledsami
-net "psh1" loc = "A2";
-net "psh2" loc = "E2";
+net "psh1" loc = "B9";
+net "psh2" loc = "A7";
 #LED_Data_0s
 net "LED_Data_1(0)" loc = "N14";
 net "LED_Data_1(1)" loc = "M5";
