@@ -1,6 +1,9 @@
-#Clock
+                                                                                                                    #Clock
 net "clk" loc = "E7";
 #NET "reset_n" CLOCK_DEDICATED_ROUTE = FALSE;
+#net "salclock" loc = "A7";
+#net "salclk_1" loc = "B9";
+#net "salclk_2" loc = "A10";
 
 #SPI 1 pins
 net "cs_1" 	 loc = "F15";
@@ -13,26 +16,27 @@ net "mosi_2" loc = "C8";
 net "miso_2" loc = "D6";
 net "sclk_2" loc = "C4";
 
-#joystick_1s
-net "joystick_der(0)" loc = "N14";
-net "joystick_der(1)" loc = "M5";
-net "joystick_der(2)" loc = "M3";
-net "joystick_der(3)" loc = "R10";
-net "joystick_der(4)" loc = "N8";
-net "joystick_der(5)" loc = "R5";
-net "joystick_der(6)" loc = "P1";
-net "joystick_der(7)" loc = "L2";
-net "joystick_der(8)" loc = "R4";
-net "joystick_der(9)" loc = "N1";
-#joystick_2s
-net "joystick_izq(0)" loc = "B5";
-net "joystick_izq(1)" loc = "A4";
-net "joystick_izq(2)" loc = "C2";
-net "joystick_izq(3)" loc = "D1";
-net "joystick_izq(4)" loc = "F11";
-net "joystick_izq(5)" loc = "D11";
-net "joystick_izq(6)" loc = "D8";
-net "joystick_izq(7)" loc = "D7";
-net "joystick_izq(8)" loc = "E6";
-net "joystick_izq(9)" loc = "D4";
+net "serial_data_comm" loc = "E14";
+
+#Data comm FPGA
+net "result_comm(0)" loc = "N14";
+net "result_comm(1)" loc = "M5";
+net "result_comm(2)" loc = "M3";
+net "result_comm(3)" loc = "R10";
+net "result_comm(4)" loc = "N8";
+net "result_comm(5)" loc = "R5";
+net "result_comm(6)" loc = "P1";
+net "result_comm(7)" loc = "L2";
+net "result_comm(8)" loc = "R4";
+net "result_comm(9)" loc = "N1";
+net "result_comm(10)" loc = "B5";
+net "result_comm(11)" loc = "A4";
+net "result_comm(12)" loc = "C2";
+net "result_comm(13)" loc = "D1";
+net "result_comm(14)" loc = "F11";
+net "result_comm(15)" loc = "D11";
+net "result_comm(16)" loc = "D8";
+net "result_comm(17)" loc = "D7";
+net "result_comm(18)" loc = "E6";
+net "result_comm(19)" loc = "D4";
 
