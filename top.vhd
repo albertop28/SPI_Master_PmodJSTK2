@@ -10,7 +10,7 @@ entity Top_SPI is port(
 	cs_1, mosi_1, sclk_1 : out std_logic;
 	cs_2, mosi_2, sclk_2 : out std_logic;
    serial_data_comm : out std_logic;
-	result_comm : out std_logic_vector(19 downto 0)
+	result_comm : out std_logic_vector(15 downto 0)
 	);
 end Top_SPI;
 
